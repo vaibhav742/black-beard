@@ -1,0 +1,142 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+{%load staticfiles%}
+<body data-spy="scroll" data-target=".main-navigation" data-offset="150">
+    <section id="MainContainer">
+        <!-- Header starts here -->
+        <header id="Header">
+            <nav class="main-navigation">
+                <div class="container clearfix">
+                    <div class="site-logo-wrap">
+                        <a class="logo" href="#"><img src="{%static 'images/ds-logo.svg'%}" alt="GYM"></a>
+                    </div>
+                    <a href="javascript:void(0)" class="menu-trigger hidden-lg-up"><span>&nbsp;</span></a>
+                    <div class="main-menu hidden-md-down">
+                        <ul class="menu-list">
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#HeroBanner">Home</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#Services">Services</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#About">About</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#ContactUs">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-menu hidden-lg-up">
+                    <ul class="mobile-menu-list">
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#HeroBanner">Home</a></li>
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#Services">Services</a></li>
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#About">About</a></li>
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#ContactUs">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header ends here -->
+        <!-- Banner starts here -->
+        <section id="HeroBanner">
+            <div class="hero-content">
+                <h1>Welcome To <span id="gym"><strong><i>Black-Beard Gym</i></strong></span></h1>
+                <p>We’ll Help You
+Get to a Healthier Place</p>
+                <a href="#" class="hero-cta">Get Started</a>
+            </div>
+        </section>
+        <!-- Banner ends here -->
+        <!-- Services section starts here -->
+        <section id="Services">
+            <div class="container">
+                <div class="block-heading">
+                    <h2>Services</h2>
+                    <p>Why Join US?</p>
+                </div>
+                <div class="services-wrapper">
+                    <div class="each-service">
+                        <div class="service-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                        <h5 class="service-title">Support</h5>
+                        <p class="service-description">Every member gets a free, personalized Get Started Plan when they join. Our friendly, professional staff is trained to help you along your fitness journey, no matter how much support you need.</p>
+                    </div>
+                    <div class="each-service">
+                        <div class="service-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                        <h5 class="service-title">Tools and Training.</h5>
+                        <p class="service-description">Getting to a healthier place is about more than going to the gym. That’s why we offer personal training and classes when you’re here, and the right tools to keep you on track when you’re not.</p>
+                    </div>
+                    <div class="each-service">
+                        <div class="service-icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                        <h5 class="service-title">Convenience</h5>
+                        <p class="service-description">With 24/7 access to more than 3,000 locations worldwide, you're joining the most convenient gym on the planet.</p>
+                    </div>
+                    <div class="each-service">
+                        <div class="service-icon"><i class="fa fa-university" aria-hidden="true"></i></div>
+                        <h5 class="service-title">Community</h5>
+                        <p class="service-description">You’re not just joining a gym. You’re joining a supportive community of like-minded people who are here to give you the encouragement you need.</p>
+                    </div>
+                    <!-- <div class="each-service">
+                        <div class="service-icon"><i class="fa fa-camera-retro" aria-hidden="true"></i></div>
+                        <h5 class="service-title">LOREM IPSUM</h5>
+                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    </div> -->
+                    <div class="each-service">
+                        <div class="service-icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+                        <h5 class="service-title">Lifestyle</h5>
+                        <p class="service-description">We at Black Beard provide high performance equipments with personal trainers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section ends here -->
+        <!-- About Us section starts here -->
+        <section id="About">
+            <div class="container">
+                <div class="about-wrapper">
+                    <h2>About Us</h2>
+                    <p>Black-Beard Gym is acknowledged for its unrivalled success in providing the finest equipment and fitness knowledge available to help its members achieve their individual potential. It follows a globally proven fitness training module with state-of-the-art infrastructure and delivery methodology and continuous up gradation through training programs. With certified trainers and nutritional counseling, Black-Beard Gym provides a comprehensive approach to the health and well-being of its member.</p>
+                </div>
+            </div>
+        </section>
+        <p></p>
+        <br>
+
+
+        <section id="Testimonial">
+          <div class="testimonial-wrap">
+          <div class="container">
+            <div class="block-heading">
+              <h2>What Clients Say About Us</h2>
+            </div>
+            <ul class="testimonial-slider">
+              <li>" I would like to thank Black Beard gym for shaping my life with fitness "</li>
+              <li>" I'd say that the team is excellent and it is some of the best service"</li>
+            </ul>
+          </div>
+        </div>
+        </section>
+        <!-- Contact us section starts here -->
+        <section id="ContactUs">
+            <div class="container contact-container">
+                <h3 class="contact-title">Get In Touch</h3>
+                            <div class="submit-btn">
+                              <form class="" action="{%url 'contact'%}">
+                                <button type="submit">Get a Free Trial</button>
+
+                              </form>
+
+
+                    </div>
+                </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

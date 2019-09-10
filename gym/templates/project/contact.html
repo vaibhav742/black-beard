@@ -1,0 +1,76 @@
+
+{%extends 'base.html'%}
+
+{%block content%}
+{%load staticfiles%}
+<body data-spy="scroll" data-target=".main-navigation" data-offset="150">
+    <section id="MainContainer">
+        <!-- Header starts here -->
+        <header id="Header">
+            <nav class="main-navigation">
+                <div class="container clearfix">
+                    <div class="site-logo-wrap">
+                        <a class="logo" href="#"><img src="{%static 'images/ds-logo.svg'%}" alt="GYM"></a>
+                    </div>
+                    <a href="javascript:void(0)" class="menu-trigger hidden-lg-up"><span>&nbsp;</span></a>
+                    <div class="main-menu hidden-md-down">
+                        <ul class="menu-list">
+                            <li><a class="nav-link" href="{%url 'index'%}" data-target="#HeroBanner" >Home</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#Services">Services</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#About">About</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#ContactUs">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-menu hidden-lg-up">
+                    <ul class="mobile-menu-list">
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#HeroBanner">Home</a></li>
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#Services">Services</a></li>
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#About">About</a></li>
+                        <li><a class="nav-link" href="javascript:void(0)" data-target="#ContactUs">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header ends here -->
+        <!-- Banner starts here -->
+        <section id="HeroBanner">
+            <div class="hero-content">
+                <h1>CONTACT<span id="gym">  US
+                  </span>
+                  <br>
+                  <br>
+                  <br>
+                <p><i><strong>And Get A Free Trial  Today !</strong</i></p>
+            </div>
+        </section>
+
+
+
+        <section id="ContactUs">
+            <div class="container contact-container">
+                <h3 class="contact-title">Get In Touch</h3>
+                <div class="contact-outer-wrapper">
+
+                    <!-- <div class="form-wrap"> -->
+                        <p class="add-title">Fill out the Form:</p>
+
+
+
+                      <form method="POST">
+                          {% csrf_token %}
+                          {{form.as_p }}
+                            <div class="submit-btn">
+                                <button type="submit">submit</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </section>
+
+
+
+{%endblock%}
